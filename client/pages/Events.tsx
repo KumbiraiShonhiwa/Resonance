@@ -18,7 +18,8 @@ export default function Events() {
       location: "Main Hall",
       category: "Concert",
       time: "7:00 PM",
-      description: "Join us for an evening of classical and contemporary music.",
+      description:
+        "Join us for an evening of classical and contemporary music.",
     },
     {
       date: "March 22, 2024",

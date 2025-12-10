@@ -14,9 +14,7 @@ export default function Gallery() {
   const galleryItems = Array.from({ length: 12 }, (_, idx) => ({
     id: idx + 1,
     title: `Event ${idx + 1}`,
-    category: ["Concert", "Jam Session", "Workshop", "Performance"][
-      idx % 4
-    ],
+    category: ["Concert", "Jam Session", "Workshop", "Performance"][idx % 4],
   }));
 
   return (

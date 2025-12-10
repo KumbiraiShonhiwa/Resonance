@@ -39,7 +39,7 @@ export const animateHeroText = (element: HTMLElement | null) => {
  */
 export const animateSlideUp = (
   element: HTMLElement | null,
-  delay: number = 0
+  delay: number = 0,
 ) => {
   if (!element || prefersReducedMotion()) {
     element?.style.setProperty("opacity", "1");
@@ -71,7 +71,7 @@ export const observeScrollAnimation = (element: HTMLElement | null) => {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.1 },
   );
 
   observer.observe(element);
@@ -98,7 +98,7 @@ export const addHoverGlow = (element: HTMLElement | null) => {
  */
 export const addParallaxEffect = (
   element: HTMLElement | null,
-  speed: number = 0.5
+  speed: number = 0.5,
 ) => {
   if (!element || prefersReducedMotion()) return;
 

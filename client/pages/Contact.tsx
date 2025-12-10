@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import Layout from "@/components/Layout";
-import { Mail, MapPin, Phone, Instagram, Facebook, Linkedin } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Instagram,
+  Facebook,
+  Linkedin,
+} from "lucide-react";
 import { observeScrollAnimation } from "@/lib/animations";
 
 export default function Contact() {
@@ -21,7 +28,7 @@ export default function Contact() {
   }, []);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({

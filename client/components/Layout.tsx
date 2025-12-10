@@ -10,9 +10,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col">
       <NavBar />
-      <main className="flex-1 w-full pt-16">
-        {children}
-      </main>
+      <main className="flex-1 w-full pt-16">{children}</main>
       <Footer />
     </div>
   );
