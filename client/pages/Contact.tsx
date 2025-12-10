@@ -10,6 +10,8 @@ import {
 } from "lucide-react";
 import { observeScrollAnimation } from "@/lib/animations";
 
+
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -100,98 +102,7 @@ export default function Contact() {
             })}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Form */}
-            <div className="scroll-animate">
-              <h2 className="text-3xl font-display font-bold text-secondary mb-8">
-                Send us a Message
-              </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-semibold text-secondary mb-2"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold text-secondary mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-semibold text-secondary mb-2"
-                  >
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
-                    placeholder="How can we help?"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-semibold text-secondary mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
-                    placeholder="Your message..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-200 hover:shadow-lg"
-                >
-                  {submitted ? "Message Sent! ✓" : "Send Message"}
-                </button>
-              </form>
-            </div>
-
+          <div className="grid md:grid gap-12">
             {/* Social & Info */}
             <div className="scroll-animate">
               <h2 className="text-3xl font-display font-bold text-secondary mb-8">

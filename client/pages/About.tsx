@@ -1,8 +1,12 @@
 import { useEffect } from "react";
 import Layout from "@/components/Layout";
-import { Users, Music, Heart, Zap } from "lucide-react";
+import { Users, Music, Heart, Zap, Expand } from "lucide-react";
 import { observeScrollAnimation } from "@/lib/animations";
+import { Card } from "@/components/ui/card";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import Member_Card from "@/components/Member_Card";
 
+ 
 export default function About() {
   useEffect(() => {
     const sections = document.querySelectorAll(".scroll-animate");
@@ -13,24 +17,39 @@ export default function About() {
 
   const teamMembers = [
     {
-      name: "Sarah Johnson",
+      name: "Xandra Ang",
       role: "President",
-      area: "Classical Music",
+      about: "",
+      genre: "Rock Music",
+      photo: "client/photos/xandra.jpg",
     },
     {
-      name: "Marcus Chen",
+      name: "Natasya Prasetyo",
       role: "Vice President",
-      area: "Jazz & Improvisation",
+      about: "",
+      genre: "R&B",
+      photo: "client/photos/natasya.jpg",
     },
     {
-      name: "Emma Williams",
-      role: "Events Coordinator",
-      area: "Event Management",
+      name: "Zahra Haider ",
+      role: "Media and Branding Officer",
+      about: "",
+      genre: "K-Pop",
+      photo: "client/photos/zahra.jpg",
     },
     {
-      name: "James Rodriguez",
-      role: "Tech Lead",
-      area: "Sound Engineering",
+      name: "Mohaymin Iqbal",
+      role: "Treasurer",
+      about: "",
+      genre: "Sound Engineering",
+      photo: "client/photos/mohaymin.jpg",
+    },
+    {
+      name: "Kumbirai Shonhiwa",
+      role: " Event Coordinator",
+      about: "",
+      genre: "Hip Hop/ Indie",
+      photo: "client/photos/kumbirai.jpg",
     },
   ];
 
@@ -102,15 +121,15 @@ export default function About() {
           </h2>
           <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
             <p>
-              Resonance was founded by a group of passionate musicians at the
+              Resonance was founded by a group of passionate students at the
               University of Sunderland who believed that music had the power to
               bring people together and transform communities.
             </p>
             <p>
               What started as informal jam sessions in the student hub has
-              evolved into a thriving community of over 500 members, hosting
-              regular concerts, workshops, and collaborative events throughout
-              the academic year.
+              evolved into a thriving community, hosting a variety of concerts
+              trips, workshops, and collaborative events throughout the academic
+              year.
             </p>
             <p>
               Today, Resonance stands as a testament to the creativity and
@@ -129,21 +148,14 @@ export default function About() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, idx) => (
-              <div
+              <Member_Card
                 key={idx}
-                className="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg hover:border-primary border border-gray-200 transition-all duration-200"
-              >
-                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Users className="w-12 h-12 text-primary opacity-30" />
-                </div>
-                <h3 className="text-lg font-semibold text-secondary mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-primary font-semibold text-sm mb-2">
-                  {member.role}
-                </p>
-                <p className="text-gray-600 text-sm">{member.area}</p>
-              </div>
+                name={member.name}
+                role={member.role}
+                genre={member.genre}
+                photo={member.photo}
+                about={member.about}
+              />
             ))}
           </div>
         </div>

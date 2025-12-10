@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Layout from "@/components/Layout";
 import { Calendar, MapPin, Tag } from "lucide-react";
 import { observeScrollAnimation } from "@/lib/animations";
+import data from './Events.json'
 
 export default function Events() {
   useEffect(() => {
@@ -10,6 +11,8 @@ export default function Events() {
       observeScrollAnimation(section as HTMLElement);
     });
   }, []);
+
+  console.log(data)
 
   const events = [
     {

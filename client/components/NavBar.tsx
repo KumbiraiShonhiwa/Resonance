@@ -11,6 +11,8 @@ export default function NavBar() {
     { label: "Gallery", href: "/gallery" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
+    { label: "Merch", href: "/merch" },
+    { label: "Register", href: "/register" }
   ];
 
   return (
@@ -78,7 +80,7 @@ export default function NavBar() {
                 </Link>
               ))}
               <Link
-                to="/contact"
+                to="/register"
                 className="px-4 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all text-center"
                 onClick={() => setIsOpen(false)}
               >
