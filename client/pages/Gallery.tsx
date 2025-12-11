@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Layout from "@/components/Layout";
 import { Image as ImageIcon } from "lucide-react";
 import { observeScrollAnimation } from "@/lib/animations";
+import MediaGallery from "@/components/MediaGallery";
 
 export default function Gallery() {
   useEffect(() => {
@@ -15,6 +16,7 @@ export default function Gallery() {
     id: idx + 1,
     title: `Event ${idx + 1}`,
     category: ["Concert", "Jam Session", "Workshop", "Performance"][idx % 4],
+    imgURL: "client/photos/logo.jpg",
   }));
 
   return (
@@ -41,7 +43,11 @@ export default function Gallery() {
                 className="scroll-animate group cursor-pointer relative overflow-hidden rounded-lg aspect-square bg-gray-200 hover:shadow-xl transition-all duration-200"
               >
                 <div className="w-full h-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                  <ImageIcon className="w-12 h-12 text-primary opacity-30" />
+                  <img
+                    src={item.imgURL}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  ></img>
                 </div>
 
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col items-end justify-end p-4">
@@ -54,6 +60,8 @@ export default function Gallery() {
           </div>
         </div>
       </section>
+
+      <MediaGallery />
 
       {/* Footer CTA */}
       <section className="py-16 bg-white text-center">

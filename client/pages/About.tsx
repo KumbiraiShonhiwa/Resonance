@@ -2,11 +2,9 @@ import { useEffect } from "react";
 import Layout from "@/components/Layout";
 import { Users, Music, Heart, Zap, Expand } from "lucide-react";
 import { observeScrollAnimation } from "@/lib/animations";
-import { Card } from "@/components/ui/card";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import Member_Card from "@/components/Member_Card";
+import { Card, CardContent, CardDescription } from "@/components/ui/card";
 
- 
 export default function About() {
   useEffect(() => {
     const sections = document.querySelectorAll(".scroll-animate");
@@ -27,28 +25,28 @@ export default function About() {
       name: "Natasya Prasetyo",
       role: "Vice President",
       about: "",
-      genre: "R&B",
+      genre: "R&B Music",
       photo: "client/photos/natasya.jpg",
     },
     {
       name: "Zahra Haider ",
       role: "Media and Branding Officer",
       about: "",
-      genre: "K-Pop",
+      genre: "K-Pop Music",
       photo: "client/photos/zahra.jpg",
     },
     {
       name: "Mohaymin Iqbal",
       role: "Treasurer",
       about: "",
-      genre: "Sound Engineering",
+      genre: "Metal/Rock Music",
       photo: "client/photos/mohaymin.jpg",
     },
     {
       name: "Kumbirai Shonhiwa",
       role: " Event Coordinator",
       about: "",
-      genre: "Hip Hop/ Indie",
+      genre: "Hip Hop & Indie Music",
       photo: "client/photos/kumbirai.jpg",
     },
   ];
@@ -59,10 +57,22 @@ export default function About() {
       <section className="scroll-animate py-16 sm:py-24 bg-gradient-to-br from-secondary to-black text-white">
         <div className="container max-w-5xl mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-display font-bold mb-6">
-            About Resonance
+            Our Story
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Celebrating the power of music and community
+            Resonance was founded by a group of passionate students at the
+            University of Sunderland who believed that music had the power to
+            bring people together and transform communities.
+          </p>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            What started as informal jam sessions in the student hub has evolved
+            into a thriving community, hosting a variety of concerts trips,
+            workshops, and collaborative events throughout the academic year.
+          </p>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Today, Resonance stands as a testament to the creativity and
+            dedication of our members, celebrating the diverse musical talents
+            within our university and beyond.
           </p>
         </div>
       </section>
@@ -113,40 +123,13 @@ export default function About() {
         </div>
       </section>
 
-      {/* Story */}
-      <section className="scroll-animate py-20 sm:py-28 bg-gray-50">
-        <div className="container max-w-3xl mx-auto px-4">
-          <h2 className="text-4xl font-display font-bold text-secondary mb-8 text-center">
-            Our Story
-          </h2>
-          <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
-            <p>
-              Resonance was founded by a group of passionate students at the
-              University of Sunderland who believed that music had the power to
-              bring people together and transform communities.
-            </p>
-            <p>
-              What started as informal jam sessions in the student hub has
-              evolved into a thriving community, hosting a variety of concerts
-              trips, workshops, and collaborative events throughout the academic
-              year.
-            </p>
-            <p>
-              Today, Resonance stands as a testament to the creativity and
-              dedication of our members, celebrating the diverse musical talents
-              within our university and beyond.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Committee */}
-      <section className="scroll-animate py-20 sm:py-28 bg-white">
+      <section className="scroll-animate py-16 sm:py-24 bg-gradient-to-br from-secondary to-black text-white">
         <div className="container max-w-5xl mx-auto px-4">
-          <h2 className="text-4xl font-display font-bold text-secondary mb-16 text-center">
+          <h2 className="text-4xl font-display font-bold text-primary mb-16 text-center">
             Meet the Committee
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-3">
             {teamMembers.map((member, idx) => (
               <Member_Card
                 key={idx}
@@ -196,22 +179,22 @@ export default function About() {
             ].map((value, idx) => {
               const Icon = value.icon;
               return (
-                <div
+                <Card
                   key={idx}
                   className="bg-white rounded-xl p-8 border border-gray-200 hover:border-primary hover:shadow-lg transition-all duration-200"
                 >
-                  <div className="flex items-start gap-4">
+                  <CardContent className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
-                    <div>
+                    <CardDescription>
                       <h3 className="text-xl font-semibold text-secondary mb-2">
                         {value.title}
                       </h3>
                       <p className="text-gray-600">{value.description}</p>
-                    </div>
-                  </div>
-                </div>
+                    </CardDescription>
+                  </CardContent>
+                </Card>
               );
             })}
           </div>

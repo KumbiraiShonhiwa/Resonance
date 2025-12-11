@@ -22,7 +22,7 @@ export default function NavBar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform">
-              <Music className="w-6 h-6 text-white" />
+              <img src="client/photos/logo.jpg"></img>
             </div>
             <span className="font-display font-bold text-lg text-secondary hidden sm:inline">
               Resonance
