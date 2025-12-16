@@ -70,7 +70,7 @@ export default function Index() {
             ref={heroTitleRef}
             className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-white mb-6 leading-tight"
           >
-            Resonance Music Society
+            Resonance
           </h1>
 
           <p

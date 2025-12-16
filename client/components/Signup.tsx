@@ -144,7 +144,7 @@ export default function Signup() {
               </FormItem>
             )}
           />
-          <Button type="submit" variant="default" size="default">Submit</Button>
+          <Button type="submit" variant="default" size="default">Sign up</Button>
         </form>
       </Form>
 

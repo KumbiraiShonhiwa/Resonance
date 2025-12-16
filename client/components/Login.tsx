@@ -78,7 +78,7 @@ export default function Login() {
           )}
         />
         <Button type="submit" variant="default" size="default">
-          Submit
+          Log in
         </Button>
       </form>
     </Form>

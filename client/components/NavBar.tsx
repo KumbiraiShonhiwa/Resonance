@@ -12,7 +12,8 @@ export default function NavBar() {
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
     { label: "Merch", href: "/merch" },
-    { label: "Register", href: "/register" }
+    { label: "Register", href: "/register" },
+    { label: "Login", href: "/login" },
   ];
 
   return (

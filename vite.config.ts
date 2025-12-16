@@ -23,6 +23,7 @@ export default defineConfig(({ mode }) => ({
       "@shared": path.resolve(__dirname, "./shared"),
     },
   },
+  base: process.env.VITE_BASE_PATH || "/Resonance",
 }));
 
 function expressPlugin(): Plugin {

@@ -19,8 +19,9 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
+import Login from "@/components/Login";
 
-export default function SignupPage() {
+export default function LoginPage(){
   const heroTitleRef = useRef<HTMLHeadingElement>(null);
   const heroSubRef = useRef<HTMLParagraphElement>(null);
   const heroCTARef = useRef<HTMLDivElement>(null);
@@ -104,14 +105,11 @@ export default function SignupPage() {
             <Card className="bg-white/90 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 w-full max-w-sm">
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl font-bold">
-                  Create an Account
+                  Log into existing account
                 </CardTitle>
-                <CardDescription>
-                  Join the society, get access to events & more.
-                </CardDescription>
               </CardHeader>
               <CardContent>
-                <Signup />
+                <Login/>
               </CardContent>
               <CardFooter className="flex flex-col gap-2">
                 <p className="text-sm">Already have an account?</p>
