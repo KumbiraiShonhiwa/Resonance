@@ -2,6 +2,14 @@ import { useEffect } from "react";
 import Layout from "@/components/Layout";
 import { Calendar, MapPin, Tag } from "lucide-react";
 import { observeScrollAnimation } from "@/lib/animations";
+import data from "./Events.json";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 
 export default function Events() {
   useEffect(() => {
@@ -10,6 +18,8 @@ export default function Events() {
       observeScrollAnimation(section as HTMLElement);
     });
   }, []);
+
+  console.log(data);
 
   const events = [
     {
@@ -65,18 +75,18 @@ export default function Events() {
       <section className="sticky top-16 bg-white border-b border-gray-200 z-40">
         <div className="container max-w-5xl mx-auto px-4 py-4">
           <div className="flex flex-wrap gap-2">
-            <button className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium">
+            <Button className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium">
               All Events
-            </button>
-            <button className="px-4 py-2 border border-gray-300 text-secondary rounded-lg hover:bg-gray-50 transition-colors font-medium">
+            </Button>
+            <Button className="px-4 py-2 border border-gray-300 text-secondary rounded-lg hover:bg-gray-50 transition-colors font-medium">
               Concerts
-            </button>
-            <button className="px-4 py-2 border border-gray-300 text-secondary rounded-lg hover:bg-gray-50 transition-colors font-medium">
+            </Button>
+            <Button className="px-4 py-2 border border-gray-300 text-secondary rounded-lg hover:bg-gray-50 transition-colors font-medium">
               Jam Sessions
-            </button>
-            <button className="px-4 py-2 border border-gray-300 text-secondary rounded-lg hover:bg-gray-50 transition-colors font-medium">
+            </Button>
+            <Button className="px-4 py-2 border border-gray-300 text-secondary rounded-lg hover:bg-gray-50 transition-colors font-medium">
               Workshops
-            </button>
+            </Button>
           </div>
         </div>
       </section>
@@ -86,16 +96,16 @@ export default function Events() {
         <div className="container max-w-5xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
             {events.map((event, idx) => (
-              <div
+              <Card
                 key={idx}
                 className="scroll-animate bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg hover:border-primary transition-all duration-200 group"
               >
-                <div className="bg-gradient-to-r from-primary/10 to-primary/5 h-32 flex items-center justify-center relative overflow-hidden">
+                <CardHeader className="bg-gradient-to-r from-primary/10 to-primary/5 h-32 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <Calendar className="w-16 h-16 text-primary opacity-20 group-hover:opacity-30 transition-opacity" />
-                </div>
+                </CardHeader>
 
-                <div className="p-6">
+                <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <p className="text-primary font-semibold text-sm mb-2">
@@ -122,12 +132,13 @@ export default function Events() {
                       {event.location}
                     </div>
                   </div>
-
-                  <button className="w-full px-4 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors">
-                    RSVP
-                  </button>
-                </div>
-              </div>
+                  <CardFooter>
+                    <Button className="w-full px-4 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors">
+                      RSVP
+                    </Button>
+                  </CardFooter>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

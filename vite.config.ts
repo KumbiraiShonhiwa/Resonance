@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     fs: {
-      allow: ["./client", "./shared"],
+      allow: ["./client", "./shared", 'C:/Users/kumbi/OneDrive/Documents/GitHub/Resonance'],
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
     },
   },
@@ -23,6 +23,7 @@ export default defineConfig(({ mode }) => ({
       "@shared": path.resolve(__dirname, "./shared"),
     },
   },
+  base: process.env.VITE_BASE_PATH || "/Resonance",
 }));
 
 function expressPlugin(): Plugin {

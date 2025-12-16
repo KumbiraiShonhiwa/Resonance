@@ -59,10 +59,9 @@ export default function Index() {
         {/* Animated Background */}
         <div
           ref={heroBackgroundRef}
-          className="absolute inset-0 z-0 opacity-30"
+          className="absolute inset-0 z-0 opacity-30 px-0"
         >
-          <div className="absolute top-20 right-20 w-96 h-96 bg-primary rounded-full blur-3xl opacity-20"></div>
-          <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary rounded-full blur-3xl opacity-10"></div>
+          <img src="client\photos\background.jpg"></img>
         </div>
 
         {/* Hero Content */}
@@ -71,7 +70,7 @@ export default function Index() {
             ref={heroTitleRef}
             className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-white mb-6 leading-tight"
           >
-            Resonance Music Society
+            Resonance
           </h1>
 
           <p
@@ -142,7 +141,7 @@ export default function Index() {
               </Link>
             </div>
             <div className="relative h-96 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl overflow-hidden flex items-center justify-center">
-              <Music className="w-32 h-32 text-primary opacity-30" />
+              <img src="client\photos\logo.jpg"></img>
               <div className="absolute inset-0 border-2 border-primary/30 rounded-2xl"></div>
             </div>
           </div>

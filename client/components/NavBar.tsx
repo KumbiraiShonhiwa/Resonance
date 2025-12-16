@@ -11,6 +11,9 @@ export default function NavBar() {
     { label: "Gallery", href: "/gallery" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
+    { label: "Merch", href: "/merch" },
+    { label: "Register", href: "/register" },
+    { label: "Login", href: "/login" },
   ];
 
   return (
@@ -20,7 +23,7 @@ export default function NavBar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform">
-              <Music className="w-6 h-6 text-white" />
+              <img src="client/photos/logo.jpg"></img>
             </div>
             <span className="font-display font-bold text-lg text-secondary hidden sm:inline">
               Resonance
@@ -78,7 +81,7 @@ export default function NavBar() {
                 </Link>
               ))}
               <Link
-                to="/contact"
+                to="/register"
                 className="px-4 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all text-center"
                 onClick={() => setIsOpen(false)}
               >

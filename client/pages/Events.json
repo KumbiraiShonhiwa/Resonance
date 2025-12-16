@@ -1,0 +1,36 @@
+{
+  "events": [
+    {
+      "date": "March 15, 2024",
+      "title": "Spring Concert Series",
+      "location": "Main Hall",
+      "category": "Concert",
+      "time": "7:00 PM",
+      "description": "Join us for an evening of classical and contemporary music."
+    },
+    {
+      "date": "March 22, 2024",
+      "title": "Acoustic Jam Session",
+      "location": "Student Hub",
+      "category": "Jam Session",
+      "time": "6:00 PM",
+      "description": "Bring your instrument and jam with fellow musicians."
+    },
+    {
+      "date": "April 5, 2024",
+      "title": "Electronic Music Showcase",
+      "location": "Performance Space",
+      "category": "Showcase",
+      "time": "8:00 PM",
+      "description": "Experience cutting-edge electronic music performances."
+    },
+    {
+      "date": "April 12, 2024",
+      "title": "Collaborative Workshop",
+      "location": "Music Studio",
+      "category": "Workshop",
+      "time": "3:00 PM",
+      "description": "Learn music production and collaboration techniques."
+    }
+  ]
+}
