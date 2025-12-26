@@ -55,7 +55,7 @@ export default function SignupPage() {
           ref={heroBackgroundRef}
           className="absolute inset-0 z-0 opacity-20"
           style={{
-            backgroundImage: "url('/client/photos/background.jpg')",
+            backgroundImage: "url('/public/photos/background.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
