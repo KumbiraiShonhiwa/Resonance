@@ -14,25 +14,25 @@ export default function MediaGallery() {
       id: 1,
       title: "Event 1",
       category: "Concert",
-      imgURL: "client/photos/logo.jpg",
+      imgURL: "/photos/logo.jpg",
     },
     {
       id: 2,
       title: "Event 2",
       category: "Jam Session",
-      imgURL: "client/photos/logo.jpg",
+      imgURL: "/photos/logo.jpg",
     },
     {
       id: 3,
       title: "Event 3",
       category: "Workshop",
-      imgURL: "client/photos/logo.jpg",
+      imgURL: "/photos/logo.jpg",
     },
     {
       id: 4,
       title: "Event 4",
       category: "Performance",
-      imgURL: "client/photos/logo.jpg",
+      imgURL: "/photos/logo.jpg",
     },
   ];
 
