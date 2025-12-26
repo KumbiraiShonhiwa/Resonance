@@ -16,7 +16,7 @@ export default function Gallery() {
     id: idx + 1,
     title: `Event ${idx + 1}`,
     category: ["Concert", "Jam Session", "Workshop", "Performance"][idx % 4],
-    imgURL: "client/photos/logo.jpg",
+    imgURL: "/photos/logo.jpg",
   }));
 
   return (

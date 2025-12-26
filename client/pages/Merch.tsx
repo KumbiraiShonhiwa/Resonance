@@ -23,37 +23,37 @@ export default function Merch() {
       id: 0,
       price: "$10.00",
       name: "Hoodies",
-      imgURl: "client/photos/logo.jpg",
+      imgURl: "/photos/logo.jpg",
     },
     {
       id: 1,
       price: "$10.00",
       name: "Hoodies",
-      imgURl: "client/photos/logo.jpg",
+      imgURl: "/photos/logo.jpg",
     },
     {
       id: 2,
       price: "$10.00",
       name: "Hoodies",
-      imgURl: "client/photos/logo.jpg",
+      imgURl: "/photos/logo.jpg",
     },
     {
       id: 3,
       price: "$10.00",
       name: "Hoodies",
-      imgURl: "client/photos/logo.jpg",
+      imgURl: "/photos/logo.jpg",
     },
     {
       id: 4,
       price: "$10.00",
       name: "Hoodies",
-      imgURl: "client/photos/logo.jpg",
+      imgURl: "/photos/logo.jpg",
     },
     {
       id: 5,
       price: "$10.00",
       name: "Hoodies",
-      imgURl: "client/photos/logo.jpg",
+      imgURl: "/photos/logo.jpg",
     },
   ];
   return (

@@ -71,7 +71,7 @@ export default function Contact() {
               {
                 icon: Mail,
                 title: "Email",
-                content: "resonance@sunderland.ac.uk",
+                content: "resonance.mussoc@gmail.com",
               },
               {
                 icon: MapPin,
@@ -81,7 +81,7 @@ export default function Contact() {
               {
                 icon: Phone,
                 title: "Phone",
-                content: "+44 (0) 191 515 2000",
+                content: "+44 (0) 7552 4499 37",
               },
             ].map((info, idx) => {
               const Icon = info.icon;

@@ -61,7 +61,7 @@ export default function Index() {
           ref={heroBackgroundRef}
           className="absolute inset-0 z-0 opacity-30 px-0"
         >
-          <img src="client\photos\background.jpg"></img>
+          <img src="\photos\background.jpg"></img>
         </div>
 
         {/* Hero Content */}
@@ -141,7 +141,7 @@ export default function Index() {
               </Link>
             </div>
             <div className="relative h-96 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl overflow-hidden flex items-center justify-center">
-              <img src="client\photos\logo.jpg"></img>
+              <img src="\photos\logo.jpg"></img>
               <div className="absolute inset-0 border-2 border-primary/30 rounded-2xl"></div>
             </div>
           </div>
