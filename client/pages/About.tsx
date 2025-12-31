@@ -15,7 +15,7 @@ export default function About() {
 
   const teamMembers = [
     {
-      name: "Xandra Ang",
+      name: "Xandrea Ang",
       role: "President",
       about: "",
       genre: "Rock Music",
@@ -36,7 +36,7 @@ export default function About() {
       photo: "/photos/zahra.jpg",
     },
     {
-      name: "Mohaymin Iqbal",
+      name: "Abdul Mohaymin Iqbal",
       role: "Treasurer",
       about: "",
       genre: "Metal/Rock Music",
