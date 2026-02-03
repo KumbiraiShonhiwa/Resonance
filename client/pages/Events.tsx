@@ -10,6 +10,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
+import { link } from "fs";
 
 export default function Events() {
   useEffect(() => {
@@ -23,37 +24,24 @@ export default function Events() {
 
   const events = [
     {
-      date: "March 15, 2024",
-      title: "Spring Concert Series",
-      location: "Main Hall",
-      category: "Concert",
-      time: "7:00 PM",
+      date: "February 5, 2026",
+      title: "Refreshers Fair",
+      location: "City Campus",
+      category: "Societies Fair",
+      time: "9:00 AM",
       description:
         "Join us for an evening of classical and contemporary music.",
+      link: "https://www.sunderlandsu.co.uk/events/your-refreshers-fair",
     },
     {
-      date: "March 22, 2024",
-      title: "Acoustic Jam Session",
-      location: "Student Hub",
-      category: "Jam Session",
-      time: "6:00 PM",
-      description: "Bring your instrument and jam with fellow musicians.",
-    },
-    {
-      date: "April 5, 2024",
-      title: "Electronic Music Showcase",
-      location: "Performance Space",
-      category: "Showcase",
-      time: "8:00 PM",
-      description: "Experience cutting-edge electronic music performances.",
-    },
-    {
-      date: "April 12, 2024",
-      title: "Collaborative Workshop",
-      location: "Music Studio",
-      category: "Workshop",
-      time: "3:00 PM",
-      description: "Learn music production and collaboration techniques.",
+      date: "February 13, 2026",
+      title: "Love in Stereo",
+      location: "City Campus",
+      category: "Valentines Social",
+      time: "4:00 PM",
+      description:
+        "Join us for an evening of classical and contemporary music.",
+      link: "",
     },
   ];
 
@@ -134,7 +122,7 @@ export default function Events() {
                   </div>
                   <CardFooter>
                     <Button className="w-full px-4 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors">
-                      RSVP
+                      <a href={event.link}>RSVP</a>
                     </Button>
                   </CardFooter>
                 </CardContent>
