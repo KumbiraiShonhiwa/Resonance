@@ -216,28 +216,16 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                date: "March 15",
-                title: "Spring Concert Series",
-                location: "Main Hall",
-                category: "Concert",
+                date: "February 5",
+                title: "Refreshers Fair",
+                location: "City Campus",
+                category: "Societies Fair",
               },
               {
-                date: "March 22",
-                title: "Acoustic Jam Session",
-                location: "Student Hub",
-                category: "Jam Session",
-              },
-              {
-                date: "April 5",
-                title: "Electronic Music Showcase",
-                location: "Performance Space",
-                category: "Showcase",
-              },
-              {
-                date: "April 12",
-                title: "Collaborative Workshop",
-                location: "Music Studio",
-                category: "Workshop",
+                date: "February 13",
+                title: "Love in Stereo",
+                location: "City Campus",
+                category: "Valentines Social",
               },
             ].map((event, idx) => (
               <div

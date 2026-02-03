@@ -12,6 +12,10 @@ export default function NavBar() {
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
     { label: "Merch", href: "/merch" },
+    {
+      label: "SU Website",
+      href: "/student-union",
+    },
     // { label: "Register", href: "/register" },
     // { label: "Login", href: "/login" },
   ];

@@ -15,6 +15,8 @@ import NotFound from "./pages/NotFound";
 import SignupPage from "./pages/Register";
 import Merch from "./pages/Merch";
 import LoginPage from "./pages/Login";
+import StudentUnion from "./pages/StudentUnion";
+
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,7 @@ const App = () => (
           <Route path="/register" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path ="/merch" element={<Merch/>}/>
+          <Route path ="/student-union" element={<StudentUnion/>}/>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
