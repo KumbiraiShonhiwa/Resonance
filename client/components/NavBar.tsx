@@ -8,10 +8,10 @@ export default function NavBar() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Events", href: "/events" },
-    { label: "Gallery", href: "/gallery" },
+    // { label: "Gallery", href: "/gallery" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
-    { label: "Merch", href: "/merch" },
+    // { label: "Merch", href: "/merch" },
     {
       label: "SU Website",
       href: "/student-union",
